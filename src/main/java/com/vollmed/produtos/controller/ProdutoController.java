@@ -12,7 +12,7 @@ import com.vollmed.produtos.model.ProdutoRepository;
 @Controller
 public class ProdutoController {
 
-    @Autowired
+    @Autowired //instanciou
     private ProdutoRepository repository;
 
     //EXIBINDO OS PRODUTOS
@@ -36,7 +36,7 @@ public class ProdutoController {
     @PostMapping("/cadastro") //acontece quando o botão for clicado
     public String cadastrarProdutos(Produto produto){
         repository.save(produto);
-        return "/";
+        return "redirect:/"; //redireciona para a página inicial
     }
 
 }
