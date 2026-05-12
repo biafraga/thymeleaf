@@ -12,18 +12,18 @@
         <h1>Listagem de Produtos</h1>
         <table>
             <thead>
-                <tr th:each="produto : ${todosOsProdutos}">
-                    <th th:text="${produto.id}">ID</th>
-                    <th th:text="${produto.nome}">Nome</th>
-                    <th th:text="${produto.preco}">Preço</th>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>Id do produto</td>
-                    <td>Nome do produto</td>
-                    <td>Preço do produto</td>
+                <tr th:each="produto : ${todosOsProdutos}">
+                    <td th:text="${produto.id}">Id do produto</td>
+                    <td th:text="${produto.nome}">Nome do produto</td>
+                    <td th:text="${produto.preco}">Preço do produto</td>
                 </tr>
             </tbody>
         </table>
